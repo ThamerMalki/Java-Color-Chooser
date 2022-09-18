@@ -3,24 +3,25 @@ import javax.swing.*;
 import java.awt.event.*;
 
 
-public class MyFrame extends JFrame implements ActionListener{
+public class MyFrame implements ActionListener{
 
 	JButton button = new JButton("Pick a color");
 	JLabel label = new JLabel();
 	
 	MyFrame(){
 		
+		JFrame frame = new JFrame("Color Chooser");
 		button.addActionListener(this);
 		
 		label.setText("Random Text");
 		label.setFont(new Font("MV Boli",Font.BOLD,35));
 		
-		this.setSize(450,450);
-		this.setLayout(new FlowLayout());
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.add(button);
-		this.add(label);
-		this.setVisible(true);
+		frame.setSize(450,450);
+		frame.setLayout(new FlowLayout());
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(button);
+		frame.add(label);
+		frame.setVisible(true);
 		
 	}
 	
